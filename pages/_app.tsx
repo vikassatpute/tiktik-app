@@ -1,15 +1,15 @@
-import '../styles/globals.css';
-import type { AppProps } from 'next/app';
-import { useEffect, useState } from 'react';
+import '../styles/globals.css'
+import type { AppProps } from 'next/app'
+import { useEffect, useState } from 'react'
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
-  const [isSSR, setIsSSR] = useState(true);
+  const [isSSR, setIsSSR] = useState(true)
 
   useEffect(() => {
-    setIsSSR(false);
-  }, []);
+    setIsSSR(false)
+  }, [])
 
-  if (isSSR) return null;
+  if (isSSR) return null
 
   return (
     <div>
@@ -20,7 +20,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       </div>
       <Component {...pageProps} />
     </div>
-  );
-};
+  )
+}
 
-export default MyApp;
+export default MyApp
